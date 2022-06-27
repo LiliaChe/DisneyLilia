@@ -43,7 +43,6 @@ public class Invite_Friend extends AppCompatActivity {
     public String write() {
         String text = String.valueOf(edMovie.getText());
         return ("Let's watch together " + '"' + text + '"' + ", which is a Disney movie!");
-
     }
 
     public void setActionBar(String heading) {

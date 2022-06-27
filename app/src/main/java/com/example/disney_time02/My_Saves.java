@@ -42,7 +42,7 @@ public class My_Saves extends AppCompatActivity implements MyRecyclerViewAdapter
 
         dialog = new AlertDialog.Builder(this)
                 .setView(R.layout.layout_loading_dialog)
-                .setTitle("Searching movies...").create();
+                .create();
         dialog.show();
 
         new Thread(this::selectMovie).start();

@@ -22,7 +22,8 @@ public class Movie_fy extends AppCompatActivity implements MyRecyclerViewAdapter
     MyRecyclerViewAdapter adapter;
     Map<Integer, Map<String, String>> moviesMap;
     ArrayList<DataModel> rowsString;
-    AlertDialog dialog;
+    AlertDialog dialogSearch;
+    AlertDialog dialogLoad;
     private Integer position;
 
 
@@ -39,10 +40,13 @@ public class Movie_fy extends AppCompatActivity implements MyRecyclerViewAdapter
         adapter.setClickListener(this);
         recyclerView.setAdapter(adapter);
 
-        dialog = new AlertDialog.Builder(this)
+        dialogSearch = new AlertDialog.Builder(this)
                 .setView(R.layout.layout_loading_dialog)
-                .setTitle("Searching movie...").create();
-        dialog.show();
+                .setTitle("Searching movies...").create();
+        dialogSearch.show();
+        dialogLoad = new AlertDialog.Builder(this)
+                .setView(R.layout.layout_loading_dialog)
+                .setTitle("Loading movie...").create();
 
         new Thread(this::selectMovie).start();
     }
@@ -66,7 +70,7 @@ public class Movie_fy extends AppCompatActivity implements MyRecyclerViewAdapter
             rowsString.add(new DataModel(row.get("name"), row.get("trailer")));
         }
         adapter.notifyItemRangeInserted(0, rowsString.size());
-        dialog.dismiss();
+        dialogSearch.dismiss();
     }
 
     private void checkMovie() {
@@ -88,13 +92,13 @@ public class Movie_fy extends AppCompatActivity implements MyRecyclerViewAdapter
                 .putExtra("savedMovie", result);
         startActivity(intent);
 
-        dialog.dismiss();
+        dialogLoad.dismiss();
     }
 
     @Override
     public void onItemClick(View view, int position) {
         this.position = position;
-        dialog.show();
+        dialogLoad.show();
         new Thread(this::checkMovie).start();
 
     }

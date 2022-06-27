@@ -28,40 +28,47 @@
         android:layout_margin="10dp"
         android:text="Randomizer for you:" />
 
-    <Button
-        android:gravity="left"
-        android:fontFamily="@font/disney"
-        android:id="@+id/button1"
+    <RadioGroup
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Which princess are you?"
-        android:onClick="goPlay1"/>
-    <Button
-        android:gravity="left"
-        android:fontFamily="@font/disney"
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Which disney character are you?"
-        android:onClick="goPlay2"/>
-    <Button
-        android:gravity="left"
-        android:fontFamily="@font/disney"
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Which role suits you the best?"
-        android:onClick="goPlay3"/>
+        android:layout_height="wrap_content" >
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/disney"
-        android:gravity="left"
-        android:onClick="goPlay4"
-        android:text="What you should eat while watching?"
-        android:textStyle="bold" />
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/disney"
+            android:gravity="left"
+            android:onClick="goPlay1"
+            android:text="Which princess are you?"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/disney"
+            android:onClick="goPlay2"
+            android:text="Which disney character are you?"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/disney"
+            android:onClick="goPlay3"
+            android:text="Which role suits you the best?"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/disney"
+            android:onClick="goPlay4"
+            android:text="What you should eat while watching?"
+            android:textSize="20dp" />
+    </RadioGroup>
 
     <ImageView
         android:id="@+id/imageView5"
@@ -77,4 +84,5 @@
         android:layout_height="wrap_content"
         android:onClick="goBack"
         android:text="BACK" />
+
 </LinearLayout>
