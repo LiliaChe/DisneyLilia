@@ -53,12 +53,11 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:background="@color/blue"
-                android:fontFamily="@font/writing"
+                android:fontFamily="@font/reg"
                 android:hint="@string/user_hint"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textColorHighlight="@color/white"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="40dp"/>
         </TableRow>
 
         <TableRow
@@ -76,15 +75,14 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:fontFamily="@font/writing"
+                android:fontFamily="@font/reg"
                 android:hint="@string/password_hint"
-                android:textStyle="bold"
                 android:id="@+id/etPassword"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:background="@color/blue"
                 android:inputType="textPassword"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="40dp" />
         </TableRow>
 
