@@ -9,31 +9,40 @@
     android:background="@drawable/icon_big"
     tools:context=".LoginActivity">
     <TextView
+        android:gravity="center"
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign In:"
+        android:textSize="50dp"
+        android:fontFamily="@font/reg"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_gravity="left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/heading"
         android:fontFamily="@font/reg"
-        android:textSize="35sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:layout_marginBottom="50sp"/>
-    <GridLayout
+        android:layout_marginBottom="40dp"/>
+    <TableLayout
         android:background="@color/d_blue"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:columnCount="2">
-
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_row="0"
-            android:layout_column="0"
             android:layout_gravity="center"
             android:fontFamily="@font/writing"
-            android:text="@string/name"
+            android:text="Username: "
             android:textColor="@color/white"
-            android:textSize="40sp"
+            android:textSize="30dp"
             android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -42,14 +51,19 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etNameLogin"
+                android:fontFamily="@font/writing"
+                android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/user_hint"
                 android:background="@color/blue"
                 android:textColor="@color/black"
-                android:textSize="30sp"/>
+                android:textSize="30dp"/>
         </com.google.android.material.textfield.TextInputLayout>
-
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
         <TextView
             android:layout_width="180dp"
             android:layout_height="wrap_content"
@@ -57,7 +71,7 @@
             android:fontFamily="@font/writing"
             android:text="@string/password"
             android:textColor="@color/white"
-            android:textSize="40sp"
+            android:textSize="30dp"
             android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -66,18 +80,19 @@
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:textStyle="bold"
+                android:fontFamily="@font/writing"
                 android:id="@+id/etPasswordLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password_hint"
                 android:background="@color/blue"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="30dp"
                 android:inputType="textPassword"/>
-
     </com.google.android.material.textfield.TextInputLayout>
-
-</GridLayout>
+        </TableRow>
+    </TableLayout>
 
     <Button
         android:textStyle="bold"
@@ -85,10 +100,12 @@
         android:id="@+id/btnGoLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:textSize="20dp"
         android:onClick="onClick"
         android:text="sign in" />
     <Button
+        android:textStyle="bold"
+        android:fontFamily="@font/classic"
         android:id="@+id/b_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

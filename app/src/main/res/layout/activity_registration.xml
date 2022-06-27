@@ -7,57 +7,88 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/icon_big">
+
     <TextView
+        android:gravity="center"
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up:"
+        android:textSize="50dp"
+        android:fontFamily="@font/reg"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_gravity="left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/heading"
         android:fontFamily="@font/reg"
-        android:textSize="35sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:layout_marginBottom="40dp"/>
-    <GridLayout
+
+    <TableLayout
         android:background="@color/d_blue"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:columnCount="2">
-        <TextView
-            android:layout_gravity="center"
-            android:fontFamily="@font/writing"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="@string/name"
-            android:textColor="@color/white"/>
-        <EditText
-            android:background="@color/blue"
-            android:textColorHighlight="@color/white"
-            android:textColor="@color/white"
-            android:id="@+id/etName"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:textSize="35dp"/>
-        <TextView
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:fontFamily="@font/writing"
-            android:textSize="30dp"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="@string/password"
-            android:textColor="@color/white"/>
-        <EditText
-            android:background="@color/blue"
-            android:textColor="@color/white"
-            android:id="@+id/etPassword"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:textSize="35dp"
-            android:inputType="numberPassword"/>
-    </GridLayout>
+        android:layout_height="wrap_content">
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/writing"
+                android:text="Username:"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:hint="@string/user_hint"
+                android:textStyle="bold"
+                android:fontFamily="@font/writing"
+                android:id="@+id/etName"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/white"
+                android:textSize="35dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/writing"
+                android:text="@string/password"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:fontFamily="@font/writing"
+                android:hint="@string/password_hint"
+                android:textStyle="bold"
+                android:id="@+id/etPassword"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textSize="35dp" />
+        </TableRow>
+
+    </TableLayout>
     <Button
         android:layout_gravity="center"
         android:id="@+id/btnGoReg"
@@ -65,7 +96,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/classic"
         android:text="sign up"
-        android:textSize="35dp"
+        android:textSize="20dp"
         android:textStyle="bold" />
     <Button
         android:textStyle="bold"
@@ -75,4 +106,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BACK" />
+
 </LinearLayout>

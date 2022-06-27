@@ -136,13 +136,13 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
         String name = etName.getText().toString();
         String password = etPassword.getText().toString();
         if (name.equals("")) {
-            message += "The field 'name' is empty!\nInsert data!";
+            message += "Insert username! ";
             Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
             message = "";
             return false;
         }
         if (password.equals("")) {
-            message += "The field 'password' is empty!\nInsert data!";
+            message += "Insert password! ";
             Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
             message = "";
             return false;
