@@ -7,24 +7,31 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:background="#FFF9C4">
-    <TextView
-        android:textStyle="bold"
-        android:textSize="40sp"
-        android:textColor="@color/blue"
-        android:fontFamily="@font/reg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="My Saves:"/>
 
-    <Button
-        android:textStyle="bold"
-        android:fontFamily="@font/classic"
-        android:onClick="goBack"
-        android:id="@+id/b_back"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="BACK" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/reg"
+            android:text="My Saves:"
+            android:textColor="@color/blue"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/b_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/classic"
+            android:onClick="goBack"
+            android:text="BACK"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/savedMovieView"

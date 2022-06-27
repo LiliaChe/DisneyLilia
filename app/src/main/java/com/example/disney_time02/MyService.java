@@ -13,7 +13,7 @@ public class MyService extends Service {
    @Override
    public void onCreate() {
       super.onCreate();
-      this.player = MediaPlayer.create(this, R.raw.bb);
+      this.player = MediaPlayer.create(this, R.raw.song);
       this.player.setLooping(true);
    }
 
