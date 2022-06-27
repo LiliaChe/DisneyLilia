@@ -4,6 +4,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Looper;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -76,6 +77,10 @@ public class Movie_Page extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
+    public boolean onOptionsItemSelected(final MenuItem item) {
+        MenuClass menuClass = new MenuClass(this);
+        return menuClass.getItemSelected(item);
+    }
     private void prepareMovieView() {
         String movieUrl = getIntent().getExtras().getString("url", "");
         String url = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/" +
@@ -106,7 +111,7 @@ public class Movie_Page extends AppCompatActivity {
         MysqlConnect mysqlConnect = new MysqlConnect();
         if (mysqlConnect.executeSql(sql, this) > 0) {
             Toast.makeText(this,
-                    "Movie " + movieName + (switchChecked ? " added to" : " removed from") + " your favorites",
+                    "Movie " + movieName + (switchChecked ? " added to" : " removed from") + " your saves",
                     Toast.LENGTH_SHORT).show();
         }
         dialog.dismiss();

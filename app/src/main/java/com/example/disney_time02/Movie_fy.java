@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import androidx.appcompat.app.ActionBar;
@@ -59,6 +60,11 @@ public class Movie_fy extends AppCompatActivity implements MyRecyclerViewAdapter
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
+    }
+    
+    public boolean onOptionsItemSelected(final MenuItem item) {
+        MenuClass menuClass = new MenuClass(this);
+        return menuClass.getItemSelected(item);
     }
 
     private void selectMovie() {

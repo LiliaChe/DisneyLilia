@@ -86,7 +86,7 @@ public class MenuClass extends AppCompatActivity {
                 .putString("passwordHash", "")
                 .apply();
         //Return to login page with flag as new task
-        context.startActivity(new Intent(context, MainActivity.class)
+        context.startActivity(new Intent(context, LoginActivity.class)
                 .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
     }
 }

@@ -21,7 +21,7 @@
         android:textColor="@color/d_blue"
         android:layout_marginStart="10dp"
         android:fontFamily="@font/reg"
-        android:textSize="20sp"/>
+        android:textSize="40sp"/>
 
 
 </LinearLayout>

@@ -45,20 +45,20 @@
                 android:fontFamily="@font/writing"
                 android:text="Username:"
                 android:textColor="@color/white"
-                android:textSize="30dp"
+                android:textSize="40dp"
                 android:textStyle="bold" />
 
             <EditText
-                android:hint="@string/user_hint"
-                android:textStyle="bold"
-                android:fontFamily="@font/writing"
                 android:id="@+id/etName"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:background="@color/blue"
+                android:fontFamily="@font/writing"
+                android:hint="@string/user_hint"
                 android:textColor="@color/white"
                 android:textColorHighlight="@color/white"
-                android:textSize="35dp" />
+                android:textSize="40dp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -72,7 +72,7 @@
                 android:fontFamily="@font/writing"
                 android:text="@string/password"
                 android:textColor="@color/white"
-                android:textSize="30dp"
+                android:textSize="40dp"
                 android:textStyle="bold" />
 
             <EditText
@@ -85,15 +85,16 @@
                 android:background="@color/blue"
                 android:inputType="textPassword"
                 android:textColor="@color/white"
-                android:textSize="35dp" />
+                android:textSize="40dp" />
         </TableRow>
 
     </TableLayout>
+
     <Button
-        android:layout_gravity="center"
         android:id="@+id/btnGoReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:fontFamily="@font/classic"
         android:text="sign up"
         android:textSize="20dp"

@@ -42,7 +42,7 @@
             android:fontFamily="@font/writing"
             android:text="Username: "
             android:textColor="@color/white"
-            android:textSize="30dp"
+            android:textSize="40dp"
             android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -54,11 +54,11 @@
                 android:fontFamily="@font/writing"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:hint="@string/user_hint"
                 android:background="@color/blue"
                 android:textColor="@color/black"
-                android:textSize="30dp"/>
+                android:textSize="40dp"/>
         </com.google.android.material.textfield.TextInputLayout>
         </TableRow>
         <TableRow
@@ -71,7 +71,7 @@
             android:fontFamily="@font/writing"
             android:text="@string/password"
             android:textColor="@color/white"
-            android:textSize="30dp"
+            android:textSize="40dp"
             android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -84,7 +84,7 @@
                 android:fontFamily="@font/writing"
                 android:id="@+id/etPasswordLogin"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:hint="@string/password_hint"
                 android:background="@color/blue"
                 android:textColor="@color/black"
