@@ -1,9 +1,12 @@
 package com.example.disney_time02;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -27,7 +30,7 @@ public class Movie_fy extends AppCompatActivity implements MyRecyclerViewAdapter
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_fy);
-
+        setActionBar("");
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -38,10 +41,20 @@ public class Movie_fy extends AppCompatActivity implements MyRecyclerViewAdapter
 
         dialog = new AlertDialog.Builder(this)
                 .setView(R.layout.layout_loading_dialog)
-                .setTitle("Searching movies...").create();
+                .setTitle("Searching movie...").create();
         dialog.show();
 
         new Thread(this::selectMovie).start();
+    }
+    public void setActionBar(String heading) {
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(androidx.cardview.R.color.cardview_dark_background, null)));
+        actionBar.setTitle(heading);
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
     }
 
     private void selectMovie() {

@@ -1,11 +1,14 @@
 package com.example.disney_time02;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Looper;
+import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
@@ -31,7 +34,7 @@ public class Movie_Page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_page);
-
+        setActionBar("");
         //Set text box Genre
         String genre = getIntent().getExtras().getString("genre", "");
         EditText edGenre = findViewById(R.id.genres);
@@ -63,7 +66,16 @@ public class Movie_Page extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         new Thread(this::prepareMovieView).start();
     }
-
+    public void setActionBar(String heading) {
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(androidx.cardview.R.color.cardview_dark_background, null)));
+        actionBar.setTitle(heading);
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
     private void prepareMovieView() {
         String movieUrl = getIntent().getExtras().getString("url", "");
         String url = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/" +
