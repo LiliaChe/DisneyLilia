@@ -27,6 +27,7 @@ public class My_Saves extends AppCompatActivity implements MyRecyclerViewAdapter
     private Integer position;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +40,7 @@ public class My_Saves extends AppCompatActivity implements MyRecyclerViewAdapter
         adapter = new MyRecyclerViewAdapter(this, rowsString);
         adapter.setClickListener(this);
         recyclerView.setAdapter(adapter);
+        setActionBar("");
 
         dialog = new AlertDialog.Builder(this)
                 .setView(R.layout.layout_loading_dialog)
@@ -57,6 +59,12 @@ public class My_Saves extends AppCompatActivity implements MyRecyclerViewAdapter
         }
         adapter.notifyItemRangeInserted(0, rowsString.size());
         dialog.dismiss();
+    }
+    public void setActionBar(String heading) {
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(androidx.cardview.R.color.cardview_dark_background, null)));
+        actionBar.setTitle(heading);
     }
 
     private void checkMovie() {
@@ -88,13 +96,6 @@ public class My_Saves extends AppCompatActivity implements MyRecyclerViewAdapter
         dialog.show();
         new Thread(this::checkMovie).start();
 
-    }
-
-    public void setActionBar(String heading) {
-        ActionBar actionBar = getSupportActionBar();
-        assert actionBar != null;
-        actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(androidx.cardview.R.color.cardview_dark_background, null)));
-        actionBar.setTitle(heading);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
