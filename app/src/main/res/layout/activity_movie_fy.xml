@@ -8,24 +8,31 @@
     android:gravity="center_horizontal"
     android:background="#FFF9C4">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:fontFamily="@font/reg"
-        android:text="Your movies:"
-        android:textColor="@color/blue"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/b_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/classic"
-        android:onClick="goBack"
-        android:text="BACK"
-        android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/reg"
+            android:text="Your movies:"
+            android:textColor="@color/blue"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/b_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/classic"
+            android:onClick="goBack"
+            android:text="BACK"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

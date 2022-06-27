@@ -25,6 +25,8 @@
             android:layout_margin="10dp"
             android:text="The movie:"/>
         <EditText
+            android:fontFamily="@font/reg"
+            android:textSize="40sp"
             android:id="@+id/editTextId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,6 +52,8 @@
             android:text="genres:"/>
 
         <EditText
+            android:fontFamily="@font/reg"
+            android:textSize="30sp"
             android:id="@+id/genres"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,11 +86,6 @@
         </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonPlay"
-        android:text="play"/>
 
     <androidx.appcompat.widget.SwitchCompat
         android:textSize="40dp"
