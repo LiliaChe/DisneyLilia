@@ -51,14 +51,14 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etNameLogin"
-                android:fontFamily="@font/writing"
-                android:textStyle="bold"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:hint="@string/user_hint"
+                android:layout_height="wrap_content"
                 android:background="@color/blue"
+                android:fontFamily="@font/writing"
+                android:hint="@string/user_hint"
                 android:textColor="@color/black"
-                android:textSize="40dp"/>
+                android:textSize="40dp"
+                android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
         </TableRow>
         <TableRow
@@ -80,17 +80,17 @@
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:textStyle="bold"
-                android:fontFamily="@font/writing"
                 android:id="@+id/etPasswordLogin"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:hint="@string/password_hint"
+                android:layout_height="wrap_content"
                 android:background="@color/blue"
+                android:fontFamily="@font/writing"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
                 android:textColor="@color/black"
                 android:textSize="30dp"
-                android:inputType="textPassword"/>
-    </com.google.android.material.textfield.TextInputLayout>
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
         </TableRow>
     </TableLayout>
 
