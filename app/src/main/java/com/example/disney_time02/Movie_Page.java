@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
@@ -38,12 +39,12 @@ public class Movie_Page extends AppCompatActivity {
         setActionBar("");
         //Set text box Genre
         String genre = getIntent().getExtras().getString("genre", "");
-        EditText edGenre = findViewById(R.id.genres);
+        TextView edGenre = findViewById(R.id.genres);
         edGenre.setText(genre);
 
         //Set text box Movie name
         movieName = getIntent().getExtras().getString("movieName", "");
-        EditText edMovieName = findViewById(R.id.editTextId);
+        TextView edMovieName = findViewById(R.id.TextId);
         edMovieName.setText(movieName);
 
         //Save movie ID

@@ -24,16 +24,16 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="The movie:"/>
-        <EditText
-            android:fontFamily="@font/reg"
+        <TextView
+            android:id="@+id/TextId"
+            android:textStyle="bold"
             android:textSize="40sp"
-            android:id="@+id/editTextId"
+            android:textColor="@color/black"
+            android:fontFamily="@font/reg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:textColor="@color/black"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:layout_margin="10dp"
+            android:text=""/>
     </LinearLayout>
 
     <LinearLayout
@@ -51,15 +51,14 @@
             android:layout_margin="10dp"
             android:text="genres:"/>
 
-        <EditText
+        <TextView
             android:fontFamily="@font/reg"
             android:textSize="30sp"
             android:id="@+id/genres"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/black"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:textColor="@color/black"/>
 
     </LinearLayout>
 
