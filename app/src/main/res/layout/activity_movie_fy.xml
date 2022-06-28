@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="@font/reg"
-            android:text="Your movies:"
+            android:text="Movies for you:"
             android:textColor="@color/blue"
             android:textSize="40sp"
             android:textStyle="bold" />
